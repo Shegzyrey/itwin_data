@@ -12,6 +12,10 @@ room_states = {
     "ConsultationB": {"status": "cleaning"},
 }
 
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the Hospital Management System API"}
+
 @app.get("/rooms")
 async def get_room_status():
     return JSONResponse(content=room_states)
