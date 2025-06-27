@@ -1,10 +1,20 @@
 from fastapi import FastAPI, WebSocket
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime, timedelta
 import random
 import uvicorn
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],  # Or ["*"] for dev only
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 doctors = ["Dr. Smaith", "Dr. Minha", ""]
 room_states = {
     "Room101": {"status": "available", "lastUpdated": str(datetime.now().isoformat())},
