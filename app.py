@@ -17,16 +17,28 @@ app.add_middleware(
 
 
 doctors = ["Dr. Smaith", "Dr. Minha", ""]
-room_states =   {
-    "ecInstanceId": "0x20000001756",
-    "roomId": "ConsultationA",
-    "status": "occupied",
-    "currentPatientId": "P001",
-    "estimatedReleaseTime": str(datetime.now().isoformat()),
-    "needsCleaning": True,
-    "assignedDoctor": "Dr. Smith",
-    "floor": "1",
-  }
+
+room_states = [
+    {
+      "ecInstanceId": "0x20000001756",
+      "roomId": "ConsultationA",
+      "status": "occupied",
+      "currentPatientId": "P001",
+      "estimatedReleaseTime": str(datetime.now().isoformat()),
+      "needsCleaning": True,
+      "assignedDoctor": "Dr. Smith",
+      "floor": "1",
+    },
+    {
+      "ecInstanceId": "0x1a2b3d",
+      "status": "available",
+      "currentPatientId": 'null',
+      "estimatedReleaseTime": 'null',
+      "needsCleaning": False,
+      "assignedDoctor": "Dr. Lee",
+      "floor": "1"
+    }
+]
 
 @app.get("/")
 async def root():
