@@ -30,7 +30,7 @@ room_states = [
       "floor": "1",
     },
     {
-      "ecInstanceId": "0x1a2b3d",
+      "ecInstanceId": "0x200000018cb",
       "status": "available",
       "currentPatientId": 'null',
       "estimatedReleaseTime": 'null',
