@@ -15,12 +15,17 @@ app.add_middleware(
 )
 
 
+
 doctors = ["Dr. Smaith", "Dr. Minha", ""]
-room_states = {
-    "Room101": {"status": "available", "lastUpdated": str(datetime.now().isoformat())},
-    "ConsultationA": {"status": "occupied", "currentPatientId": "P001"},
-    "ConsultationB": {"status": "cleaning"},
-}
+room_states =   {
+    "roomId": "ConsultationA",
+    "status": "occupied",
+    "currentPatientId": "P001",
+    "estimatedReleaseTime": str(datetime.now().isoformat()),
+    "needsCleaning": True,
+    "assignedDoctor": "Dr. Smith",
+    "floor": "1",
+  }
 
 @app.get("/")
 async def root():
