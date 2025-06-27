@@ -18,6 +18,7 @@ app.add_middleware(
 
 doctors = ["Dr. Smaith", "Dr. Minha", ""]
 room_states =   {
+    "ecInstanceId": "0x20000001756",
     "roomId": "ConsultationA",
     "status": "occupied",
     "currentPatientId": "P001",
