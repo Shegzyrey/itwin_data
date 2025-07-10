@@ -80,3 +80,4 @@ dmypy.json
 # Logs
 *.log
 logs/
+ranfile*
